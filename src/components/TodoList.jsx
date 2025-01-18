@@ -12,8 +12,8 @@ const TodoList = () => {
   return (
     <div>
       <TodoForm 
-      addTodo={{addTodo}}
-      newTodo={{newTodo}}
+      addTodo={addTodo}
+      newTodo={newTodo}
       setNewTodo={setNewTodo}
       />
 

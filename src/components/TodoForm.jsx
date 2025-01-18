@@ -1,20 +1,22 @@
 import React from "react";
 
 const TodoForm = ({addTodo, setNewTodo, newTodo}) => {
+  const handleAddTodo = () => {
+    addTodo(newTodo);
+    setNewTodo("");
+
+  };
+
   return (
     <div>
-      <input
+      <input 
         type="text"
+        placeholder="add to do"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Add Todo"
       />
       <button
-        onClick={() => {
-          addTodo(newTodo)
-          setNewTodo('')
-        }}
-      >
+        onClick={handleAddTodo}>
         Add Todo
       </button>
     </div>
